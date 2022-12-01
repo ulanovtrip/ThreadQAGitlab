@@ -15,7 +15,6 @@ API Test:
   stage: tests
   allow_failure: true
   script:
-    - gradle wrapper
     - ./gradlew -x test apiTests
   artifacts:
     when: always

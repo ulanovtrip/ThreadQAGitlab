@@ -23,6 +23,11 @@ public class ApiTests {
     }
 
     @Test
+    public void failedTest() {
+        Assertions.assertTrue(false);
+    }
+
+    @Test
     public void checkCeoIsElonMusk(){
         given().get("/company")
                 .then().log().body()
