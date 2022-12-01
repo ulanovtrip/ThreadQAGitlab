@@ -35,6 +35,7 @@ UI Test:
 Allure report:
   stage: allure
   script:
+    - gradle wrapper
     - ./gradlew allureReport
     - echo "Allure report live here - https://${CI_PROJECT_NAMESPACE}.${CI_PAGES_DOMAIN}/-/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/build/reports/allure-report/allureReport/index.html"
   artifacts:
